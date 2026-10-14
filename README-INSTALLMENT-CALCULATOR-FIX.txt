@@ -1,0 +1,1 @@
+Fixed the Installment Calculator. Changing the phone now recalculates Total Cost, Required Deposit, Daily Payment and Weekly Payment immediately. If a product has no configured daily_rate, remaining balance / 365 is used as a fallback estimate. Mobile navigation and mandatory application payment choices are preserved.

@@ -1,0 +1,1 @@
+Fixed admin overview JSON failure. Corrected invalid LEFT LEFT JOIN SQL, made guest orders compatible with databases that do not have orders.user_id, isolated Orders/Stock/Reviews/Payments/Leadership queries so one optional schema failure does not break the whole dashboard, and improved frontend handling for empty or invalid API responses.

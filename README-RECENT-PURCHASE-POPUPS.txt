@@ -1,0 +1,1 @@
+Adds a rotating recent-purchase popup to the bottom-left of the homepage. Uses the eight supplied customer/location/product combinations. Each popup is visible for 1 second, then fades before the next appears.

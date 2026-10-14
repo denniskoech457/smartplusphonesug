@@ -1,0 +1,1 @@
+Fixed frontend JavaScript errors caused by trying to set textContent/value/className/innerHTML on missing DOM elements. Direct element updates are now null-safe, and older success-screen references are guarded. Guest ordering, mobile navigation, mandatory payment selections, and the installment calculator are preserved.

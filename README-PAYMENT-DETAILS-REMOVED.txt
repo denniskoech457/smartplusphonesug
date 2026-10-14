@@ -1,0 +1,1 @@
+Removed the customer-facing payment details/payment instructions from the application flow. Application submission still works, and after submission the customer is directed to send application details via WhatsApp. Guest ordering, mobile navigation, required payment period/frequency selection, and other recent fixes are preserved.

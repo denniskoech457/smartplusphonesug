@@ -1,0 +1,1 @@
+Leadership management added to Admin. Admin can add/edit/delete team members, upload JPG/PNG/WebP profile images, set role, bio, display order and homepage visibility. The homepage loads the team dynamically from the database. The API attempts to create/seed the leadership_members table automatically when Admin is opened. Manual fallback: docs/leadership-management-migration.sql.

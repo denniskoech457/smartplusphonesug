@@ -1,0 +1,1 @@
+Fixed the mobile navigation menu. The previous build contained code to close the menu but was missing the menu-toggle click handler. This build restores opening/closing, changes the hamburger to X while open, closes after selecting a link, closes on outside tap/Escape, and includes an explicit mobile z-index/display reliability rule.

@@ -1,0 +1,1 @@
+This build keeps the payment-period/payment-frequency calculation fix and restores a self-contained mobile navigation handler. The hamburger opens and closes the menu, changes to an X while open, closes after selecting an item, closes on outside tap/Escape, and uses explicit responsive CSS so older rules cannot prevent the menu from displaying.

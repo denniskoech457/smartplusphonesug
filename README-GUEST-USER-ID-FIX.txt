@@ -1,0 +1,1 @@
+Fixed guest application submission error: user_id is no longer a required orders-table column. If the column exists, signed-in customers use their ID and guest orders use NULL. If the column does not exist at all, the dynamic insert skips it. For an existing database where user_id exists but is NOT NULL, run docs/guest-user-id-fix.sql.
