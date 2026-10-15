@@ -1,1 +1,0 @@
-export default function handler(req,res){if(req.method!=='GET')return res.status(405).end();const url=process.env.SUPABASE_URL,key=process.env.SUPABASE_PUBLISHABLE_KEY;if(!url||!key)return res.status(503).json({error:'Configuration missing'});res.status(200).json({url,key,turnstileSiteKey:process.env.TURNSTILE_SITE_KEY||null})}
