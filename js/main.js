@@ -29,7 +29,7 @@ async function request(file, action, body, timeoutMs = 12000) {
   const options = { credentials: 'same-origin', cache: 'no-store', headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrf }, signal: controller.signal };
   if (body) { options.method = 'POST'; options.body = JSON.stringify({ ...body, action, csrf }); }
   try {
-    const token=await getToken();if(token)options.headers.Authorization=`Bearer ${token}`;
+    const needsAuth=(file==='auth'||(file==='marketplace'&&['my_orders','order'].includes(action)));if(needsAuth){const token=await getToken();if(token)options.headers.Authorization=`Bearer ${token}`;}
     const response = await fetch(`${API}${file}?action=${encodeURIComponent(action)}`, options);
     const text = await response.text();
     let data;
