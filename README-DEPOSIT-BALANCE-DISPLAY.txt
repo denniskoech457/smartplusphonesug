@@ -1,1 +1,0 @@
-When a customer has selected a phone, payment period, and payment frequency, the application now displays the Required Deposit and Remaining Balance immediately. The summary is responsive and stacks vertically on mobile.

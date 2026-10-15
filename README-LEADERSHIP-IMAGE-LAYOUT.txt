@@ -1,1 +1,0 @@
-Leadership homepage cards updated to match the supplied visual reference: dark-green top band, circular uploaded profile image overlapping the green/white areas, centered role/name/bio, and responsive 3/2/1-column layout. Admin image uploads continue to feed these cards automatically.

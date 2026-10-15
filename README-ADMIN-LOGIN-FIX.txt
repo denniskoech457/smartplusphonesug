@@ -1,1 +1,0 @@
-Fixed admin login after leadership update. The issue was a stray JavaScript template-literal terminator in js/admin.js, which prevented the entire admin script from parsing and therefore prevented the login form handler from running. admin.js and all PHP API files were syntax-checked before packaging.

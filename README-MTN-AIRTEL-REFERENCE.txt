@@ -1,1 +1,0 @@
-Customers may submit either an MTN Mobile Money or Airtel Money transaction reference. The existing mtn_reference database field is retained internally for compatibility and stores either reference type.

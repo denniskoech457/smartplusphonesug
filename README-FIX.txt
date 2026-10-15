@@ -1,1 +1,0 @@
-Fixes 'Cannot read properties of null (reading reset)' by removing the invalid nested payment form. The payment reference panel is now a normal container with explicit JS submission. Order-success UI is null-safe and cache-busted.
