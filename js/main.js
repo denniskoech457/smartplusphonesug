@@ -10,7 +10,7 @@ function applyWebsiteName(name) {
 }
 const API = 'api/';
 let supabaseClient=null;
-async function getSupabase(){if(!supabaseClient){const config=await (await fetch('/api/config')).json();if(!config.url||!config.key)throw Error('Authentication is not configured');const mod=import('@supabase/supabase-js');supabaseClient=mod.createClient(config.url,config.key)}return supabaseClient}
+async function getSupabase(){if(!supabaseClient){const config=await (await fetch('/api/config')).json();if(!config.url||!config.key)throw Error('Authentication is not configured');const mod=await import('@supabase/supabase-js');supabaseClient=mod.createClient(config.url,config.key)}return supabaseClient}
 async function getToken(){try{const db=await getSupabase();const {data}=await db.auth.getSession();return data.session?.access_token||''}catch{return ''}}
 
 let csrf = '';
