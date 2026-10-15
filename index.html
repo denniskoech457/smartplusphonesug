@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en-UG">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SmartPay Phones Uganda | Flexible Phone Payment Plans</title>
+    <meta name="description"
+        content="Choose a quality smartphone and apply for a clear, flexible SmartPay payment plan in Uganda.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20260903-mobilenav-paymentplan1">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+</head>
+
+<body>
+    <div class="announcement hero-announcement">
+        <span>♧ Free Delivery Nationwide</span><i></i><span>↻ 7-Day Refund Policy</span><i></i><span>♢ 12-Month Warranty on All Phones</span>
+    </div>
+    <header class="site-header hero-site-header">
+        <a class="brand" href="#top"><b class="brand-icon">▯</b><span><strong>SmartPay Phones<br>Uganda</strong><small>Uganda</small></span></a>
+        <button id="menuToggle" class="menu-toggle" type="button" aria-controls="siteNav" aria-expanded="false" aria-label="Open navigation menu">☰</button>
+        <nav id="siteNav">
+            <a href="#top">Home</a>
+            <a href="#phones">Phones</a>
+            <a href="#how-it-works">How It<br>Works</a>
+            <a href="#plans">Payment<br>Plans</a>
+            <a href="#about">About<br>Us</a>
+            <a href="#apply">Apply</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+            <a class="dashboard-nav-link" href="dashboard.html">My Dashboard</a>
+            <button id="accountButton" class="nav-button">Sign in</button>
+        </nav>
+    </header>
+    <main id="top">
+        <section class="hero hero-reference">
+            <div class="hero-inner">
+                <div>
+                    <p class="eyebrow gold hero-pill">ϟ&nbsp; Flexible smartphone payment plans</p>
+                    <h1>Get Your Dream Phone<br><em>Today</em></h1>
+                    <p>Choose your phone, submit your order, make the required payment<br class="hero-desktop-break"> using our MTN Mobile Money instructions, and pay the remaining<br class="hero-desktop-break"> balance gradually.</p>
+                    <div class="hero-actions"><a class="button gold-button" href="#phones">Browse Phones <span>→</span></a><a class="button outline-button" href="#apply">Apply Now</a></div>
+                    <div class="hero-stats">
+                        <span><i>▯</i><b>10+</b>Phone Models</span>
+                        <span><i>▦</i><b>3–12</b>Month Plans</span>
+                        <span><i>↗</i><b>3</b>Payment Frequencies</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="trust-strip hero-trust-strip">
+            <span>♢&nbsp; Verified Business</span><span>♙&nbsp; Secure Payments</span><span>♧&nbsp; Free Delivery</span><span>↻&nbsp; 7-Day Refund</span><span>♙&nbsp; 12-Month Warranty</span><span>▦&nbsp; 10 Phone Models</span>
+        </div>
+        <section class="section" id="phones">
+            <div class="catalogue-heading">
+                <p class="eyebrow">Our Catalogue</p>
+                <h2>Available Phones</h2>
+                <p>Choose from premium smartphone models. Click any phone to see full specs and compare. Use the <span class="compare-inline-icon">▥</span> button to compare up to 3 phones side-by-side.</p>
+            </div>
+            <div id="brandFilters" class="filters"></div>
+            <div id="phoneGrid" class="phone-grid">
+                <p class="loading">Loading phones…</p>
+            </div>
+        </section>
+        <section class="section alt payment-plans-section" id="plans">
+            <div class="section-heading payment-plans-heading">
+                <p class="eyebrow">Plan Your Budget</p>
+                <h2>Installment Calculator</h2>
+                <p>See your required deposit, remaining balance, and estimated payment before you apply.</p>
+            </div>
+            <div class="calculator-card">
+                <div class="calculator-card-title"><span class="calculator-icon">▦</span><h3>Installment Calculator</h3></div>
+                <label class="calculator-select-label">Select a Phone<select id="calcPhone"></select></label>
+                <div class="calc-result calculator-result-grid">
+                    <div class="calc-metric total"><span>Total Cost (12 months)</span><strong id="calcTotal">UGX 0</strong></div>
+                    <div class="calc-metric deposit"><span>Required Deposit</span><strong id="calcDeposit">UGX 0</strong></div>
+                    <div class="calc-metric daily"><span>Daily Payment</span><strong id="calcDaily">UGX 0</strong></div>
+                    <div class="calc-metric weekly"><span>Weekly Payment</span><strong id="calcWeekly">UGX 0</strong></div>
+                </div>
+                <p class="calculator-footnote">*Daily and weekly figures use the configured device rate, or a 365-day balance estimate when no rate is configured. Prices in Ugandan Shillings.</p>
+            </div>
+        </section>
+        <section class="section dark how-it-works-section" id="how-it-works">
+            <div class="section-heading light how-it-works-heading">
+                <p class="eyebrow gold">Simple Process</p>
+                <h2>How It Works</h2>
+                <p>From choosing your phone to owning it outright — here's your complete journey in 10 simple steps.</p>
+            </div>
+            <div class="steps how-it-works-grid">
+                <article><div class="step-marker"><b>1</b><span aria-hidden="true">▯</span></div><h3>Choose Your Phone</h3><p>Select your preferred model, RAM &amp; storage, and colour from our catalogue.</p></article>
+                <article><div class="step-marker"><b>2</b><span aria-hidden="true">◉</span></div><h3>Submit Your Details</h3><p>Fill in your full name, National ID / NIN, phone number, and delivery details.</p></article>
+                <article><div class="step-marker"><b>3</b><span aria-hidden="true">▣</span></div><h3>Pay Your Deposit</h3><p>Send the required deposit using the MTN Mobile Money instructions issued with your order reference.</p></article>
+                <article><div class="step-marker"><b>4</b><span aria-hidden="true">✓</span></div><h3>WhatsApp Confirmation</h3><p>Send your completed application details to SmartPay on WhatsApp.</p></article>
+                <article><div class="step-marker"><b>5</b><span aria-hidden="true">♢</span></div><h3>Device Registration</h3><p>Your device is registered in our system and your financing account is activated.</p></article>
+                <article><div class="step-marker"><b>6</b><span aria-hidden="true">♧</span></div><h3>Order Processing</h3><p>Your order is prepared for delivery or collection after payment verification.</p></article>
+                <article><div class="step-marker"><b>7</b><span aria-hidden="true">◷</span></div><h3>Tracking &amp; Notification</h3><p>Receive an official tracking number and notification when your device is ready.</p></article>
+                <article><div class="step-marker"><b>8</b><span aria-hidden="true">☆</span></div><h3>Receive Your Device</h3><p>Collect from our office or have it delivered to your preferred location.</p></article>
+                <article><div class="step-marker"><b>9</b><span aria-hidden="true">↻</span></div><h3>Start Repayments</h3><p>Begin daily or weekly repayments through your customer dashboard.</p></article>
+                <article><div class="step-marker"><b>10</b><span aria-hidden="true">✓</span></div><h3>Complete Your Plan</h3><p>Once the agreed payment plan is complete, your device is fully paid for.</p></article>
+            </div>
+        </section>
+        <section class="section apply" id="apply">
+            <div class="section-heading">
+                <p class="eyebrow">Get started</p>
+                <h2>Apply for your phone</h2>
+                <p>Sign in, complete your application, and receive a unique SmartPay order reference with MTN payment instructions.</p>
+            </div>
+            <div class="application-shell">
+                <button type="button" id="applicationOverlayClose" class="application-overlay-close" aria-label="Close application">×</button>
+                <div class="progress-bar" aria-label="Application progress">
+                    <div class="progress-step active" data-progress="1"><span>1</span><b>Phone &amp; plan</b></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-progress="2"><span>2</span><b>Your details</b></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-progress="3"><span>3</span><b>Delivery</b></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-progress="4"><span>4</span><b>Review &amp; submit</b></div>
+                </div>
+                <p class="guest-order-note">No account is required to place an order.</p>
+                    <form id="applicationForm" class="card guided-form">
+                    <section class="application-step active" data-step="1">
+                        <div class="step-heading"><span class="number-badge">01</span>
+                            <div>
+                                <p class="eyebrow">Choose your phone</p>
+                                <h3>Phone &amp; payment plan</h3>
+                            </div>
+                        </div>
+                        <div id="applicationPhoneGrid" class="application-phone-grid" aria-label="Choose your phone"></div>
+                        <input type="hidden" required id="applyProduct" name="product_id">
+
+                        <div id="selectedPlanDetails" class="selected-plan-details" hidden>
+                            <div class="selected-phone-toolbar">
+                                <span>Your selected phone</span>
+                                <button type="button" id="changeApplicationPhone" class="change-application-phone">Change phone</button>
+                            </div>
+                            <div class="application-colour-block">
+                                <span class="application-field-label">Colour</span>
+                                <div id="applyColourChips" class="colour-chip-row" aria-label="Preferred colour"></div>
+                                <input type="hidden" name="preferred_colour" id="applyColour" value="">
+                            </div>
+
+                            <div class="application-plan-row">
+                                <label>Payment period
+                                    <select required name="months">
+                                        <option value="" selected disabled>Select payment period</option>
+                                        <option value="3">3 months</option>
+                                        <option value="6">6 months</option>
+                                        <option value="9">9 months</option>
+                                        <option value="12">12 months</option>
+                                    </select>
+                                </label>
+                                <label>Payment frequency
+                                    <select required name="payment_frequency" id="paymentFrequency">
+                                        <option value="" selected disabled>Select payment frequency</option>
+                                        <option value="daily">Daily</option>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="monthly">Monthly</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="selected-plan-summary" aria-live="polite">
+                                <div class="summary-metric cash"><span>Cash price</span><strong id="applyCashPrice">UGX 0</strong></div>
+                                <div class="summary-metric deposit"><span>Deposit</span><strong id="applySelectedDeposit">UGX 0</strong></div>
+                                <div class="summary-metric balance"><span>Balance</span><strong id="applyBalance">UGX 0</strong></div>
+                                <div class="summary-metric estimate"><span id="applyEstimateLabel">Est. daily</span><strong id="applyEstimate">UGX 0</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="step-tip" id="applicationStepTip">Select a phone to see colours, payment schedule, and estimated instalments.</div>
+                        <div class="step-actions first-step-actions"><span></span><button type="button" class="button primary-button next-button" data-next="2">Continue <span>›</span></button></div>
+                    </section>
+                    <section class="application-step" data-step="2">
+                        <div class="step-heading">
+                            <div>
+                                <h3>Your details</h3>
+                                <p class="step-description">Your information is used only to assess and manage your SmartPay order.</p>
+                            </div>
+                        </div>
+                        <div class="form-grid personal-details-grid">
+                            <label class="wide">Full name *
+                                <input required name="full_name" id="applyFullName" autocomplete="name" placeholder="Your full name">
+                            </label>
+                            <label>National ID / NIN *
+                                <input required name="national_id" id="applyNationalId" autocomplete="off" placeholder="e.g. CM12345678ABCD">
+                            </label>
+                            <label>Phone number *
+                                <input required name="phone_number" id="applyPhoneNumber" inputmode="tel" autocomplete="tel" placeholder="e.g. 07XX XXX XXX">
+                            </label>
+                            <label>WhatsApp number *
+                                <input required name="alternative_number" id="applyAlternativeNumber" inputmode="tel" autocomplete="tel" placeholder="e.g. 07XX XXX XXX">
+                            </label>
+                            <label>Email
+                                <input type="email" name="contact_email" id="applyContactEmail" autocomplete="email" placeholder="you@example.com">
+                            </label>
+                        </div>
+                        <div class="step-actions details-step-actions">
+                            <button type="button" class="button outline-dark back-button" data-back="1">Back</button>
+                            <button type="button" class="button primary-button" data-next="3">Continue <span>›</span></button>
+                        </div>
+                    </section>
+                    <section class="application-step" data-step="3">
+                        <div class="step-heading delivery-step-heading">
+                            <div>
+                                <h3>Delivery or collection</h3>
+                                <p class="step-description">Tell us how you would prefer to receive the approved phone.</p>
+                            </div>
+                        </div>
+
+                        <div class="delivery-method-grid" role="radiogroup" aria-label="Delivery method">
+                            <label class="delivery-method-option selected">
+                                <input type="radio" name="delivery_method" value="home_delivery" checked>
+                                <span class="delivery-radio"></span>
+                                <span class="delivery-icon" aria-hidden="true">♧</span>
+                                <span class="delivery-method-copy"><strong>Home delivery</strong><small>Share your district and landmark.</small></span>
+                            </label>
+                            <label class="delivery-method-option">
+                                <input type="radio" name="delivery_method" value="office_collection">
+                                <span class="delivery-radio"></span>
+                                <span class="delivery-icon pin-icon" aria-hidden="true">⌖</span>
+                                <span class="delivery-method-copy"><strong>Office collection</strong><small>Collection details follow approval.</small></span>
+                            </label>
+                        </div>
+
+                        <div id="homeDeliveryFields" class="delivery-details-grid">
+                            <label>District *
+                                <select required name="district" id="deliveryDistrict">
+                                    <option value="">Select district</option>
+                                    <option>Kampala</option><option>Wakiso</option><option>Mukono</option><option>Entebbe</option>
+                                    <option>Jinja</option><option>Masaka</option><option>Mbarara</option><option>Gulu</option>
+                                    <option>Lira</option><option>Mbale</option><option>Fort Portal</option><option>Kabale</option>
+                                    <option>Other</option>
+                                </select>
+                            </label>
+                            <label>Address / landmark *
+                                <textarea required name="address" id="deliveryAddress" rows="2" placeholder="Area, street, building, and nearby landmark"></textarea>
+                            </label>
+                        </div>
+
+                        <div class="delivery-notes-field">
+                            <label>Notes for SmartPay
+                                <textarea name="delivery_notes" rows="2" placeholder="Optional delivery or order notes"></textarea>
+                            </label>
+                        </div>
+
+                        <div class="step-actions delivery-step-actions">
+                            <button type="button" class="button outline-dark back-button" data-back="2">Back</button>
+                            <button type="button" class="button primary-button" data-next="4">Continue <span>›</span></button>
+                        </div>
+                    </section>
+                    <section class="application-step review-order-step" data-step="4">
+                        <div class="review-order-heading">
+                            <h3>Review your SmartPay order</h3>
+                            <p>After submitting, you will receive a unique order reference and the payment instructions configured by SmartPay.</p>
+                        </div>
+
+                        <div class="review-order-card">
+                            <div class="review-product-row">
+                                <div class="review-product-copy">
+                                    <span class="review-phone-icon" aria-hidden="true">▯</span>
+                                    <div><strong id="reviewProduct">—</strong><small id="reviewProductSpecs">—</small></div>
+                                </div>
+                                <strong class="review-cash-price" id="reviewCashPrice">UGX 0</strong>
+                            </div>
+                            <div class="review-plan-metrics">
+                                <div><span>Deposit</span><strong id="reviewDeposit">UGX 0</strong></div>
+                                <div><span>Balance</span><strong id="reviewBalance">UGX 0</strong></div>
+                                <div><span>Plan</span><strong id="reviewMonths">—</strong></div>
+                                <div><span id="reviewEstimateLabel">Est. daily</span><strong id="reviewEstimate">UGX 0</strong></div>
+                            </div>
+                            <div class="review-customer-block">
+                                <strong>Customer &amp; delivery</strong>
+                                <span id="reviewCustomerLine">—</span>
+                                <span id="reviewWhatsappLine">WhatsApp: —</span>
+                                <span id="reviewDeliveryLine">—</span>
+                            </div>
+                        </div>
+
+                        <div class="step-actions review-step-actions">
+                            <button type="button" class="button outline-dark back-button" data-back="3">Back</button>
+                            <button class="button primary-button review-submit-button" type="button" id="submitSecureOrder">Submit secure order <span>✓</span></button>
+                        </div>
+                        <p id="applicationMessage" class="wide form-note"></p>
+                    </section>
+                    <section id="orderSuccess" class="order-success order-success-payment hidden">
+                        <div class="success-icon">✓</div>
+                        <p class="eyebrow">Application received</p>
+                        <h3>Your SmartPay reference is ready</h3>
+
+                        <div class="success-reference-box">
+                            <span>ORDER REFERENCE</span>
+                            <strong id="successReference">—</strong>
+                        </div>
+
+                        <p id="successMessage" class="success-intro">Your application has been received. Send your application details to WhatsApp to continue.</p>
+
+                        <div class="success-reference-box success-deposit-box">
+                            <span>REQUIRED DEPOSIT</span>
+                            <strong id="successDeposit">UGX 0</strong>
+                        </div>
+                        <p class="success-intro">Required deposit for this phone: <strong id="successDepositText">UGX 0</strong></p>
+<div class="success-after-actions">
+                            <a id="sendApplicationWhatsApp" class="button primary-button whatsapp-application-button hidden" href="#" target="_blank" rel="noopener">Send application details to WhatsApp</a>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </section>
+        <section class="section easypay-standard-section" id="about">
+            <div class="section-heading easypay-standard-heading">
+                <p class="eyebrow">The SmartPay Standard</p>
+                <h2>Designed for Clear, Confident Decisions</h2>
+                <p>Everything you need to understand your phone, payment plan, and order status before and after applying.</p>
+            </div>
+            <div class="easypay-standard-grid">
+                <article>
+                    <div class="standard-icon" aria-hidden="true">♢</div>
+                    <h3>Genuine phones</h3>
+                    <p>Clear product specifications, condition details, and warranty information before you apply.</p>
+                </article>
+                <article>
+                    <div class="standard-icon" aria-hidden="true">▦</div>
+                    <h3>Clear payment plans</h3>
+                    <p>Compare 3, 6, 9, and 12-month options with daily, weekly, or monthly repayment estimates.</p>
+                </article>
+                <article>
+                    <div class="standard-icon" aria-hidden="true">✓</div>
+                    <h3>Verified payments</h3>
+                    <p>Application details are confirmed directly with SmartPay through WhatsApp.</p>
+                </article>
+            </div>
+        </section>
+        <section class="section faq-section" id="faq">
+            <div class="section-heading faq-heading">
+                <p class="eyebrow">Got Questions?</p>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-accordion">
+                <details>
+                    <summary>What is the minimum age to apply?<span class="faq-chevron" aria-hidden="true">⌃</span></summary>
+                    <div class="faq-answer"><p>Applicants must be 22 years or older to qualify for our installment plan.</p></div>
+                </details>
+                <details>
+                    <summary>How long does it take to receive my phone?<span class="faq-chevron" aria-hidden="true">⌃</span></summary>
+                    <div class="faq-answer"><p>After payment confirmation, your phone is typically ready for collection or delivery within 2–3 business days.</p></div>
+                </details>
+                <details>
+                    <summary>What happens if I miss a payment?<span class="faq-chevron" aria-hidden="true">⌃</span></summary>
+                    <div class="faq-answer"><p>If you miss a payment, your device may be temporarily locked. We'll contact you immediately to arrange payment. Contact our support team for assistance.</p></div>
+                </details>
+                <details>
+                    <summary>Can I choose weekly payments instead of daily?<span class="faq-chevron" aria-hidden="true">⌃</span></summary>
+                    <div class="faq-answer"><p>Yes. Select your preferred daily, weekly, or monthly payment frequency and choose a 3, 6, 9, or 12-month plan when submitting your order.</p></div>
+                </details>
+                <details>
+                    <summary>Is the deposit refundable?<span class="faq-chevron" aria-hidden="true">⌃</span></summary>
+                    <div class="faq-answer"><p>The deposit is credited towards your total phone cost. It is not refundable but counts as your first payment.</p></div>
+                </details>
+                <details>
+                    <summary>Can I change my phone after applying?<span class="faq-chevron" aria-hidden="true">⌃</span></summary>
+                    <div class="faq-answer"><p>Yes, you can change your phone selection before payment confirmation. Contact our support team for assistance.</p></div>
+                </details>
+            </div>
+        </section>
+        <section class="section reviews-section" id="reviews">
+            <div class="section-heading reviews-heading">
+                <p class="eyebrow">Customer Feedback</p>
+                <h2>Customer Reviews</h2>
+                <p>Customer testimonials published by SmartPay administrators.</p>
+            </div>
+            
+<div class="testimonial-slider-shell">
+  <div class="testimonial-slider-viewport">
+    <div id="reviewsGrid" class="review-grid testimonial-slider-track">
+                <div class="empty-review reviews-empty-state">
+                    <span class="review-verified-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.8 3.45 12 2l2.2 1.45 2.62-.18.92 2.46 2.27 1.31-.18 2.62L21.28 12l-1.45 2.34.18 2.62-2.27 1.31-.92 2.46-2.62-.18L12 22l-2.2-1.45-2.62.18-.92-2.46-2.27-1.31.18-2.62L2.72 12l1.45-2.34-.18-2.62 2.27-1.31.92-2.46 2.62.18Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    <h3>Verified customer feedback will appear here</h3>
+                    <p>Customer testimonials approved for public display will appear here.</p>
+                </div>
+            </div>
+  </div>
+  <div class="testimonial-slider-controls" aria-label="Testimonial navigation">
+    <button type="button" class="testimonial-slider-btn testimonial-prev" aria-label="Previous testimonials">&#8592;</button>
+    <div class="testimonial-slider-dots" aria-hidden="true"></div>
+    <button type="button" class="testimonial-slider-btn testimonial-next" aria-label="Next testimonials">&#8594;</button>
+  </div>
+</div>
+        </section>
+        <section class="section commitments better-buy-section">
+            <div class="section-heading better-buy-heading">
+                <p class="eyebrow">Order with Confidence</p>
+                <h2>A Better Way to Buy Your Phone</h2>
+                <p>SmartPay keeps the purchase journey straightforward, from choosing a device<br class="desktop-break"> to tracking your verified payments.</p>
+            </div>
+            <div class="commitment-grid better-buy-grid">
+                <article><span class="better-buy-icon" aria-hidden="true">▯</span>
+                    <h3>Choose a Phone</h3>
+                    <p>Compare available models, specifications, colours, stock, and payment-plan estimates.</p>
+                </article>
+                <article><span class="better-buy-icon" aria-hidden="true">▣</span>
+                    <h3>Pay Securely</h3>
+                    <p>Submit your MTN Mobile Money reference and wait for the SmartPay team to verify payment.</p>
+                </article>
+                <article><span class="better-buy-icon" aria-hidden="true">↗</span>
+                    <h3>Track Your Plan</h3>
+                    <p>Sign in to view your order reference, approval status, remaining balance, and repayment history.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="team-section" id="team">
+            <div class="team-heading">
+                <p class="eyebrow">Our Leadership</p>
+                <h2>Meet the SmartPay team</h2>
+                <p>Official profiles are published and maintained directly by SmartPay administrators.</p>
+            </div>
+            <div class="team-grid" id="leadershipGrid">
+                <article class="team-card team-loading-card">
+                    <div class="team-photo team-avatar" aria-hidden="true">EP</div>
+                    <span class="team-role">SmartPay</span>
+                    <h3>Loading leadership team…</h3>
+                    <p>Please wait while the latest team profiles are loaded.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+    <footer id="contact" class="site-footer-v2">
+        <div class="footer-v2-inner">
+            <div class="footer-v2-top">
+                <div class="footer-v2-brand">
+                    <a class="footer-logo" href="#top" aria-label="SmartPay Phones Uganda home">
+                        <span class="footer-logo-icon" aria-hidden="true">▯</span>
+                        <span><strong>SmartPay Phones</strong><small>Uganda</small></span>
+                    </a>
+                    <p>Choose a smartphone, apply securely, and track your verified payment plan from your SmartPay customer account.</p>
+                </div>
+
+                <div class="footer-v2-contact">
+                    <h3>Contact Us</h3>
+                    <a class="footer-contact-row" href="https://maps.google.com/?q=Acacia+Mall+Kampala+Uganda" target="_blank" rel="noopener">
+                        <span class="footer-contact-icon" aria-hidden="true">⌖</span>
+                        <span><strong>Acacia Mall, Kampala, Uganda</strong><small>Business hours available shortly</small></span>
+                    </a>
+                    <a class="footer-contact-row" id="footerPhoneLink" href="tel:0794421398"><span class="footer-contact-icon" aria-hidden="true">⌕</span><span id="footerPhone">0794421398</span></a>
+                    <a class="footer-contact-row" id="footerEmailLink" href="mailto:Info@easypayphonesuganda.site"><span class="footer-contact-icon" aria-hidden="true">◯</span><span id="footerEmail">Info@easypayphonesuganda.site</span></a>
+                </div>
+
+                <div class="footer-v2-hours">
+                    <h3>Business Hours</h3>
+                    <div class="hours-row"><span>Monday – Friday</span><strong>8:00 AM – 6:00 PM</strong></div>
+                    <div class="hours-row"><span>Saturday</span><strong>9:00 AM – 5:00 PM</strong></div>
+                    <div class="hours-row"><span>Sunday</span><strong class="closed">Closed</strong></div>
+                    <a href="#apply" class="footer-apply-btn">Apply Now <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+
+            <div class="footer-v2-policies">
+                <article class="footer-policy-card">
+                    <span class="policy-icon warranty" aria-hidden="true">⬡</span>
+                    <div><h4>12-Month Warranty</h4><p>All phones covered by manufacturer warranty. Defects repaired or replaced free of charge.</p></div>
+                </article>
+                <article class="footer-policy-card">
+                    <span class="policy-icon refund" aria-hidden="true">↶</span>
+                    <div><h4>7-Day Refund Policy</h4><p>Not satisfied? Return your phone within 7 days of delivery for a full deposit refund.</p></div>
+                </article>
+            </div>
+
+            <div class="footer-v2-bottom">
+                <p>© 2026 SmartPay Phones Uganda. All rights reserved.</p>
+                <nav aria-label="Footer links">
+                    <span>Acacia Mall, Kampala, Uganda</span><i></i><a href="#faq">Refund Policy</a><i></i><a href="#about">Warranty</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <a href="#top" class="footer-to-top" aria-label="Back to top">⌃</a>
+
+    <div id="recentPurchasePopup" class="recent-purchase-popup" aria-live="polite" aria-atomic="true">
+        <div class="recent-purchase-icon" aria-hidden="true">▯</div>
+        <div class="recent-purchase-copy">
+            <strong id="recentPurchaseName"></strong>
+            <p>just got a <span id="recentPurchasePhone"></span>!</p>
+        </div>
+    </div>
+
+    <div id="compareBar" class="compare-bar" aria-live="polite">
+        <div class="compare-items"></div><span class="compare-count">0 selected</span>
+        <button type="button" class="button primary-button" onclick="openCompareModal()">Compare</button>
+    </div>
+    <div id="compareModal" class="compare-modal">
+        <div class="compare-modal-box">
+            <button type="button" class="modal-close" onclick="$('#compareModal').classList.remove('show')">×</button>
+            <p class="eyebrow">Phone comparison</p><h2>Compare selected phones</h2>
+            <div class="compare-table"></div>
+        </div>
+    </div>
+    <div id="authModal" class="modal hidden">
+        <div class="modal-box"><button class="modal-close" data-close>×</button>
+            <div class="auth-tabs"><button class="active" data-auth-tab="login">Sign in</button><button
+                    data-auth-tab="register">Create account</button></div>
+            <form id="loginForm" data-auth-form="login">
+                <h2>Welcome back</h2><label>Email<input type="email" name="email" required></label><label>Password<input
+                        type="password" name="password" required></label><button class="button primary-button"
+                    type="submit">Sign in</button>
+            </form>
+            <form id="registerForm" class="hidden" data-auth-form="register">
+                <h2>Create your account</h2><label>Full name<input name="name" required></label><label>Email<input
+                        type="email" name="email" required></label><label>Password<input type="password" name="password"
+                        minlength="8" required></label><button class="button primary-button"
+                    type="submit">Register</button>
+            </form>
+            <p id="authMessage" class="form-note"></p>
+        </div>
+    </div>
+    <div id="accountPanel" class="modal hidden">
+        <div class="modal-box account-box"><button class="modal-close" data-close>×</button>
+            <h2>My SmartPay account</h2>
+            <div id="accountContent"></div><button id="logoutButton" class="button outline-dark">Sign out</button>
+        </div>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="/js/main.bundle.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+  if (typeof loadPublic === 'function') loadPublic();
+  if (typeof loadSession === 'function') loadSession();
+});
+</script>
+
+<div id="orderVerificationOverlay" class="order-verification-overlay" aria-hidden="true">
+  <div class="order-verification-card" role="status" aria-live="polite">
+    <img id="orderVerificationGif" class="order-verification-gif" src="assets/verification-loading.gif" alt="Verifying details">
+    <div id="orderVerificationSuccess" class="order-verification-success" aria-hidden="true">✓</div>
+    <h3 id="orderVerificationTitle">Verifying your details</h3>
+    <p id="orderVerificationText">Please wait while we verify your application details.</p>
+  </div>
+</div>
+
+<script>fetch('/api/config').then(r=>r.json()).then(c=>{if(!c.turnstileSiteKey)return;const form=document.getElementById('applicationForm');if(form){const widget=document.createElement('div');widget.className='cf-turnstile';widget.dataset.sitekey=c.turnstileSiteKey;widget.style.margin='16px 0';form.appendChild(widget);const render=()=>{if(window.turnstile?.render)window.turnstile.render(widget,{sitekey:c.turnstileSiteKey});else setTimeout(render,150)};render();}}).catch(()=>{});</script>
+</body>
+
+</html>

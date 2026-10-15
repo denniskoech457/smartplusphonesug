@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-UG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My SmartPay Account | SmartPay Phones Uganda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260903-selectedwaverify1">
+</head>
+<body class="customer-dashboard-page">
+<div class="customer-shell">
+  <aside class="customer-sidebar">
+    <a class="customer-brand" href="index.html"><span class="customer-brand-icon">▯</span><strong>SmartPay Phones</strong></a>
+    <nav class="customer-side-nav">
+      <a class="active" href="dashboard.html"><span>⌘</span> My Dashboard</a>
+      <a href="index.html#phones"><span>▯</span> Shop Phones</a>
+      <a href="index.html#contact"><span>♧</span> Support</a>
+    </nav>
+    <div class="customer-profile">
+      <span id="profileInitial" class="profile-avatar">E</span>
+      <div><strong id="sidebarName">SmartPay customer</strong><small id="sidebarEmail">—</small></div>
+    </div>
+  </aside>
+
+  <div class="customer-workspace">
+    <header class="customer-topbar">
+      <a class="dashboard-back" href="index.html">←</a>
+      <div><h1>My SmartPay Account</h1><p>Orders, verified payments, and repayment plans</p></div>
+      <button id="logoutButton" class="dashboard-signout">Sign out</button>
+    </header>
+
+    <main class="customer-dashboard-main">
+      <section id="dashboardMessage" class="dashboard-loading">Checking your account…</section>
+      <section id="dashboardContent" class="hidden">
+        <div class="dashboard-welcome-row">
+          <div><p class="dashboard-kicker">WELCOME BACK</p><h2>Hello, <span id="customerFirstName">there</span></h2><p>Track your SmartPay orders and keep your contact details up to date.</p></div>
+          <a class="dashboard-shop-button" href="index.html#phones">▯ &nbsp; Shop phones</a>
+        </div>
+
+        <div class="dashboard-stat-grid">
+          <article class="dashboard-stat"><span class="stat-icon stat-green">◇</span><strong id="statOrders">0</strong><h3>Orders</h3><p>All submitted applications</p></article>
+          <article class="dashboard-stat"><span class="stat-icon stat-mint">$</span><strong id="statVerified">UGX 0</strong><h3>Verified paid</h3><p>Confirmed by SmartPay</p></article>
+          <article class="dashboard-stat"><span class="stat-icon stat-orange">▤</span><strong id="statActive">0</strong><h3>Active plans</h3><p>Repayment plans in progress</p></article>
+          <article class="dashboard-stat"><span class="stat-icon stat-blue">◷</span><strong id="statAwaiting">0</strong><h3>Awaiting verification</h3><p>Orders awaiting review</p></article>
+        </div>
+
+
+        <section class="dashboard-whatsapp-card">
+          <div>
+            <p class="dashboard-kicker">CONTACT DETAILS</p>
+            <h3>WhatsApp number</h3>
+            <p>Keep your WhatsApp number up to date for future SmartPay applications and support communication.</p>
+          </div>
+          <form id="dashboardWhatsappForm" class="dashboard-whatsapp-form">
+            <label>WhatsApp number
+              <input id="dashboardWhatsappNumber" name="whatsapp_number" inputmode="tel" autocomplete="tel" required placeholder="e.g. 07XX XXX XXX">
+            </label>
+            <button class="button primary-button" type="submit">Update WhatsApp number</button>
+          </form>
+        </section>
+
+        <section class="dashboard-notifications-card">
+          <div class="notification-card-head">
+            <div class="notification-title-wrap"><span class="notification-bell">♧<b id="notificationBadge">0</b></span><div><h3>Account notifications</h3><p>Welcome, application, and payment updates from SmartPay.</p></div></div>
+            <button id="markAllRead" type="button">Mark all read</button>
+          </div>
+          <div id="notificationsList" class="notifications-list"></div>
+        </section>
+
+        <section class="dashboard-orders-section">
+          <div class="dashboard-section-head orders-heading-row">
+            <div><h3>My orders</h3><p>Every application receives a unique reference and status timeline.</p></div>
+            <button id="refreshOrders" class="orders-refresh" type="button" aria-label="Refresh orders"><span>↻</span> Refresh</button>
+          </div>
+          <div id="ordersList" class="orders-list"></div>
+
+          <div class="dashboard-help-grid">
+            <section class="order-assistance-card">
+              <h3>Need order assistance?</h3>
+              <p>Contact our support team for questions about an application, collection, or repayment plan.</p>
+              <div class="assistance-actions">
+                <a id="dashboardSupportPhone" class="support-action support-call" href="#">☎ <span>Call support</span></a>
+                <a id="dashboardSupportEmail" class="support-action support-email" href="#">♧ <span>Email support</span></a>
+              </div>
+            </section>
+            <aside class="easypay-office-card">
+              <span class="office-pin">⌖</span>
+              <h3>SmartPay office</h3>
+              <p id="dashboardOfficeLocation">Acacia Mall, Kampala, Uganda</p>
+              <small>Business hours will be confirmed shortly</small>
+            </aside>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+</div>
+<div id="toast" class="toast"></div>
+<script src="/js/dashboard.bundle.js"></script>
+</body>
+</html>

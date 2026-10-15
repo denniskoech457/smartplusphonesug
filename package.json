@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node test_api.mjs && python3 test_static.py"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.57.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.12"
+  }
+}
