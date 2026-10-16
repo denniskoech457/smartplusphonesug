@@ -1,0 +1,1 @@
+Fix: catalogue and customer session now initialize within the bundled main.js scope, rather than an inline script unable to access IIFE-scoped functions. No database changes required. Redeploy on Vercel and hard-refresh.

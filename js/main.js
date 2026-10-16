@@ -868,3 +868,14 @@ document.addEventListener('click', (event) => {
 
   requestAnimationFrame(update);
 })();
+
+// Bootstrap from inside the bundled scope, not from an external inline script.
+function initializeSmartPayHomepage(){
+  loadPublic();
+  loadSession();
+}
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeSmartPayHomepage, {once:true});
+} else {
+  initializeSmartPayHomepage();
+}
