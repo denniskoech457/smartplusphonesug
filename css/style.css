@@ -1445,3 +1445,6 @@ body.application-overlay-open{overflow:hidden!important}
   #apply .application-shell.application-overlay-active{padding-left:5px!important;padding-right:5px!important}
   #apply .application-shell.application-overlay-active .application-step{padding-left:11px!important;padding-right:11px!important}
 }
+
+.whatsapp-application-button[aria-disabled="true"] { opacity:.65; pointer-events:none; cursor:not-allowed; }
+#whatsappApplicationNotice { margin:0; text-align:center; }

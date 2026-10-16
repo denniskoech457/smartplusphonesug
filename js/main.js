@@ -572,7 +572,6 @@ function buildApplicationWhatsAppMessage(payload, reference, depositAmount) {
     `Plan: ${payload.months || '—'} months / ${payload.payment_frequency || 'daily'}`,
     `Required deposit: ${fmt(depositAmount ?? (product ? product.required_deposit : 0))}`,
     `Customer: ${payload.full_name || '—'}`,
-    `NIN: ${payload.national_id || '—'}`,
     `Phone number: ${payload.phone_number || '—'}`,
     `WhatsApp: ${payload.alternative_number || '—'}`,
     `Email: ${payload.contact_email || '—'}`,
@@ -581,17 +580,33 @@ function buildApplicationWhatsAppMessage(payload, reference, depositAmount) {
   ].join('\n');
 }
 
-function prepareApplicationWhatsApp(payload, reference, depositAmount) {
+async function prepareApplicationWhatsApp(payload, reference, depositAmount) {
   const link = $('#sendApplicationWhatsApp');
+  const notice = $('#whatsappApplicationNotice');
   if (!link) return;
-  const destination = whatsappDigits(easyPayWhatsAppNumber);
+  link.classList.remove('hidden');
+  link.removeAttribute('href');
+  link.setAttribute('aria-disabled', 'true');
+  link.textContent = 'Preparing WhatsApp message…';
+  if (notice) notice.textContent = '';
+  let destination = whatsappDigits(easyPayWhatsAppNumber);
   if (!destination) {
-    link.classList.add('hidden');
+    try {
+      const data = await request('marketplace', 'settings');
+      const settings = data.settings || {};
+      destination = whatsappDigits(settings.support_whatsapp || settings.support_phone);
+    } catch (error) { console.warn('WhatsApp contact lookup failed:', error); }
+  }
+  if (!destination || destination.length < 9 || destination.length > 15) {
+    link.textContent = 'WhatsApp contact not configured';
+    if (notice) notice.textContent = 'Your application was saved. Please ask the administrator to set the support WhatsApp number in website settings.';
     return;
   }
   const text = buildApplicationWhatsAppMessage(payload, reference, depositAmount);
   link.href = `https://wa.me/${destination}?text=${encodeURIComponent(text)}`;
-  link.classList.remove('hidden');
+  link.removeAttribute('aria-disabled');
+  link.textContent = 'Send application details to WhatsApp';
+  if (notice) notice.textContent = 'Tap to open WhatsApp with your application details ready to send. Review the message and press Send in WhatsApp.';
 }
 
 let submittedOrderReference = '';
@@ -625,7 +640,7 @@ async function submitSecureOrder() {
     const result = await request('marketplace', 'order', payload, 20000);
     window.turnstile?.reset?.();
     submittedOrderReference = result.reference;
-    prepareApplicationWhatsApp(payload, result.reference, result.deposit);
+    await prepareApplicationWhatsApp(payload, result.reference, result.deposit);
     const deposit = fmt(result.deposit);
     if ($('#successReference')) $('#successReference').textContent = result.reference;
     if ($('#successDeposit')) $('#successDeposit').textContent = deposit;
